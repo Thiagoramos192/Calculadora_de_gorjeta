@@ -1,8 +1,11 @@
+O seu código CSS parece estar bem organizado. No entanto, observei que há um pequeno erro no seletor utilizado para ocultar a mensagem de erro. Você usou `pessoas #erro`, mas na verdade a classe da mensagem de erro é apenas `erro`. Aqui está o CSS corrigido:
+
+```css
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Space Mono",serif;
+    font-family: "Space Mono", serif;
 }
 
 :root {
@@ -18,17 +21,17 @@
     --white: #ffffff;
 }
 
-body{
+body {
     background: var(--green-200);
 }
 
-header{
+header {
     display: flex;
     justify-content: center;
     padding-block: 2.8rem;
 }
 
-main{
+main {
     background-color: var(--white);
     padding: 2rem;
     border-radius: 1.562rem 1.562rem 0 0;
@@ -36,21 +39,21 @@ main{
 
 .conta,
 .gorjeta,
-.pessoas{
+.pessoas {
     margin-bottom: 2rem;
 }
 
 .conta label,
 .gorjeta label,
-.pessoas label{
+.pessoas label {
     color: var(--green-500);
     font-weight: 700;
 }
 
 .conta div,
-.pessoas div{
+.pessoas div {
     margin-top: 0.4rem;
-    background-color: var(--green-100); 
+    background-color: var(--green-100);
     padding: 0.4rem 1.2rem;
     display: flex;
     align-items: center;
@@ -59,7 +62,7 @@ main{
 }
 
 .conta input,
-.pessoas input{
+.pessoas input {
     border: none;
     text-align: right;
     width: 100%;
@@ -71,7 +74,7 @@ main{
 }
 
 .conta input::placeholder,
-.pessoas input::placeholder{
+.pessoas input::placeholder {
     color: var(--green-300);
 }
 
@@ -81,14 +84,14 @@ main{
 }
 
 .gorjeta div {
-    margin-top: 1 rem;
-    
+    margin-top: 1rem;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
 
-.gorjeta input{
+.gorjeta input {
     font-size: 1.5rem;
     font-weight: 700;
     border: none;
@@ -100,56 +103,56 @@ main{
     color: var(--white);
 }
 
-.gorjeta #outra{
+.gorjeta #outra {
     width: 100%;
     background-color: var(--green-100);
     color: var(--green-800);
 }
 
-.gorjeta #outra::placeholder{
+.gorjeta #outra::placeholder {
     color: var(--green-300);
 }
 
-.pessoas #erro{
+.pessoas .erro {
     display: none;
 }
 
-.resultados{
+.resultados {
     background: var(--green-800);
     border-radius: 0.9375rem;
     padding: 1.5rem;
 }
 
-.resultados div{
+.resultados div {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.resultados p{
+.resultados p {
     color: var(--green-700);
     font-size: 0.8125rem;
 }
 
-.resultados p strong{
+.resultados p strong {
     color: var(--white);
     font-size: 1rem;
 }
 
-.resultados div > strong{
+.resultados div > strong {
     color: var(--light-green);
     font-size: 2rem;
 }
 
-.resultados .gorjeta{
+.resultados .gorjeta {
     margin-bottom: 1.25rem;
 }
 
-.resultados .total{
+.resultados .total {
     margin-bottom: 2rem;
 }
 
-.resultados button{
+.resultados button {
     width: 100%;
     background: var(--light-green);
     border: none;
@@ -159,3 +162,4 @@ main{
     text-transform: uppercase;
     font-size: 1.25rem;
     padding-block: 0.5rem;
+}
